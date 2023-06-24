@@ -1,16 +1,56 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/dotnet-postgres
 {
-    "name": "C# (.NET) and PostgreSQL",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "app",
+  "name": "C# (.NET) and PostgreSQL",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {
-		"ghcr.io/devcontainers/features/dotnet:1": {},
-		"ghcr.io/devcontainers-contrib/features/bash-command:1": {},
-		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
-		"ghcr.io/devcontainers-contrib/features/wget-apt-get:1": {},
-		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {}
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/dotnet:1": {},
+    "ghcr.io/devcontainers-contrib/features/exa:1": {},
+    "ghcr.io/devcontainers-contrib/features/fzf:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
+    "ghcr.io/devcontainers-contrib/features/gh-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/gitmux:1": {},
+    "ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {},
+    "ghcr.io/mikaello/devcontainer-features/modern-shell-utils:1": {},
+    "ghcr.io/devcontainers-contrib/features/ripgrep:1": {},
+    "ghcr.io/stuartleeks/dev-container-features/shell-history:0": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-contrib/features/tmux-apt-get:1": {},
+    "ghcr.io/guiyomh/features/vim:0": {},
+    "ghcr.io/devcontainers-contrib/features/wget-apt-get:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.csdevkit",
+				"chouzz.vscode-better-align",
+				"kreativ-software.csharpextensions",
+				"jongrant.csharpsortusings",
+				"Catppuccin.catppuccin-vsc",
+				"EditorConfig.EditorConfig",
+				"sleistner.vscode-fileutils",
+				"mhutchie.git-graph",
+				"donjayamanne.githistory",
+				"huizhou.githd",
+				"shyykoserhiy.git-autoconfig",
+				"codezombiech.gitignore",
+				"oderwat.indent-rainbow",
+				"ms-dotnettools.vscodeintellicode-csharp",
+				"ZainChen.json",
+				"patcx.vscode-nuget-gallery",
+				"Gruntfuggly.todo-tree",
+				"DotJoshJohnson.xml",
+				"Fudge.auto-using",
+				"hbenl.vscode-test-explorer",
+				"formulahendry.dotnet-test-explorer"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -27,8 +67,8 @@
 	//		}
 	// }
 
-    // Use 'postCreateCommand' to run commands after the container is created.
-    // "postCreateCommand": "dotnet --info",
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "dotnet --info",
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
