@@ -30,6 +30,7 @@
             "name": "C#: MvcMovie [Default Configuration]",
             "type": "dotnet",
             "request": "launch",
+            "preLaunchTask": "build",
             "projectPath": "${workspaceFolder}/MvcMovie/MvcMovie.csproj"
         }
     ]
